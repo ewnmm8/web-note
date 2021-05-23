@@ -1,4 +1,12 @@
 const blackword = ["_____", "_moved", "tab_now", "tab_list"]
+
+// 旧仕様から移行
+if (localStorage.getItem("_moved") === null) {
+  localStorage.setItem("_____", localStorage.getItem("text"))
+  localStorage.removeItem("text")
+  localStorage.setItem("_moved", "moved")
+}
+
 // 汎用関数
 const save = function () {
   localStorage.setItem(tab_now, memo_area.value)
