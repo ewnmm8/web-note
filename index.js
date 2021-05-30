@@ -96,3 +96,19 @@ document.getElementById("button_delete").onclick = function () {
   }
   save()
 }
+
+
+///////////////////////////////////////////////////////////////////
+
+
+// メニュー画面を出す
+document.getElementById("memo-area-div").onclick = function (e) {
+  if (!e.target.isEqualNode(e.currentTarget)) return false
+  $("#another-page").fadeTo("slow", 1)
+}
+
+// メニューを閉じる
+document.getElementById("another-page-flex").onclick = function (e) {
+  if (!e.target.isEqualNode(e.currentTarget)) return false
+  $("#another-page").fadeOut("slow")
+}
