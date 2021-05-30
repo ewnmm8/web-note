@@ -80,11 +80,14 @@ text_add.onkeypress = function (e) {
 
 // タブ削除
 document.getElementById("button_delete").onclick = function () {
-  if (!confirm("このタブを削除します。よろしいですか？")) {
+  if (_tab_now == "_____") {
+    if (confirm("「デフォルト」タブをリセットします。よろしいですか？")) {
+      memo_area.value = ""
+    }
     return false
   }
-  if (_tab_now == "_____") {
-    memo_area.value = ""
+  if (!confirm(`「${_tab_now}」タブを削除します。よろしいですか？`)) {
+    return false
   }
   else {
     const index = _tab_list.indexOf(_tab_now)
