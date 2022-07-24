@@ -1,11 +1,4 @@
-const blackword = ["_____", "_moved", "_tab_now", "_tab_list"]
-
-// 旧仕様から移行
-if (localStorage.getItem("_moved") === null) {
-  localStorage.setItem("_____", localStorage.getItem("text"))
-  localStorage.removeItem("text")
-  localStorage.setItem("_moved", "moved")
-}
+const blackword = ["_____", "_tab_now", "_tab_list"]
 
 // 汎用関数
 const save = function () {
@@ -36,6 +29,7 @@ for (const tab_name of _tab_list) {
 
 // 画面初期化
 select.value = _tab_now
+console.log(localStorage.getItem(_tab_now))
 memo_area.value = localStorage.getItem(_tab_now) || ""
 save()
 
