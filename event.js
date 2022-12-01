@@ -1,10 +1,12 @@
 const pulldown = new PulldownSystem($("select").get(0))
+let current_tab
 
 $(window).on("load", () => {
     for (const tab of MemoTab.get_tab_list()) {
         if (tab != "__def") pulldown.add(tab)
     }
     pulldown.node.value = localStorage.getItem("last_tab") || "__def"
+    current_tab = new MemoTab(pulldown.node.value)
 })
 
 $("textarea").on("change", function () {
