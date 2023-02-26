@@ -12,18 +12,16 @@
 
 <body>
     <main>
-        <textarea placeholder="Auto save.(on Browser Cache)"></textarea>
+        <textarea placeholder="ブラウザ上に自動保存します。枠外クリックでタブを作れます。"></textarea>
     </main>
     <aside style="display: none;">
-        <select id="pulldown">
-            <option value="__def">デフォルト</option>
-        </select>
-        <button id="b_add" type="button"><</button>
-        <input type="text" id="b_add_text">
-        <button id="b_delete">×</button>
+        <button id="tab_add" type="button">+</button>
+        <select></select>
+        <button id="tab_delete">×</button>
     </aside>
-    <script src="./class.js"></script>
-    <script src="./event.js"></script>
+    <script src="./init.js"></script>
+    <script src="./UI.js"></script>
+    <script src="./select.js"></script>
 </body>
 
 </html>

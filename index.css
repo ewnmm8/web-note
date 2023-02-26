@@ -1,6 +1,6 @@
 body {
-  /*overflow: hidden;*/
   font-size: 26px;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "Osaka", "メイリオ", "Meiryo", sans-serif;
   padding: 0;
   margin: 0;
   line-height: 0;
@@ -14,18 +14,20 @@ main {
 }
 
 textarea {
-  --margin-h: 2vh;
-  --margin-w: 2vw;
+  --margin-h: 1em;
+  --margin-w: 1em;
   font-size: inherit;
+  font-family: inherit;
   position: absolute;
   resize: none;
   box-sizing: border-box;
   height: calc(100% - var(--margin-h) * 2);
   width: calc(100% - var(--margin-w) * 2);
-  padding: 0.4em 0.5em;
+  padding: 0.4em 0.5em 1em;
   border: solid black 1px;
-  border-radius: 1em;
+  border-radius: 0.2em;
   margin: var(--margin-h) var(--margin-w);
+  line-height: 1.3em;
 }
 
 aside {
