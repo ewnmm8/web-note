@@ -15,10 +15,12 @@ function make_option (value) {
 
 function init () {
     // 初回や破損時の内部データ初期化
-    if (ls_g("selected") === null || ls_g("data") === null || ls_g("data") == "{}") {
+    if (ls_g("data") === null || ls_g("data") == "{}") {
         localStorage.clear()
-        ls_s("selected", "デフォルト")
         ls_s("data", '{"デフォルト":""}')
+    }
+    if (ls_g("selected") === null) { 
+        ls_s("selected", "デフォルト")
     }
 
     // タブリスト設定
